@@ -1,0 +1,123 @@
+
+**::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  height: 100%;
+  background: linear-gradient(to right, #ff3366, #ffcc33);
+  color: #f7f5f5;
+  overflow: hidden; /* To prevent scrollbars when using gradients */
+}
+
+h1 {
+  width: 100%;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  max-width: 570px;
+  margin: 0 auto;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(248, 111, 42, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 80px;
+  grid-column-gap: 10px;
+}
+
+.form-submit {
+  outline: none;
+  border: none;
+  background-color: #4CAF50;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 36px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.form-submit:hover {
+  background-color: #45a049;
+}
+
+.cards {
+  display: flex;
+  margin: 20px 0;
+  width: 100%;
+  overflow: auto;
+}
+
+.card-item {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #ce6b6b;
+  border-radius: 5px;
+  margin: 0 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-item:hover {
+  transform: scale(1.02);
+}
+
+.card-info {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-activity {
+  line-height: 1.2;
+  margin-top: 10px;
+}
+
+.tag-error {
+  width: 100%;
+  text-align: center;
+  color: #ff3366;
+}
+
+.is-element-hidden {
+  display: none;
+}
+
+@media (max-width: 620px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
+
+  .form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
